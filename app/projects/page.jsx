@@ -70,7 +70,7 @@ function Modal({ item, onClose }) {
           {item.links && item.links.length > 0 && (
             <div className="modal-links">
               {item.links.map(({ label, url }) => (
-                <a key={url} href={url} target="_blank" rel="noreferrer" className="modal-link">
+                <a key={url} href={url} target="_blank" rel="noreferrer" className={`modal-link modal-link--${label.toLowerCase().replace(/[^a-z]/g, '')}`}>
                   {label} <span>↗</span>
                 </a>
               ))}

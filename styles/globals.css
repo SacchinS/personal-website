@@ -651,8 +651,19 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .modal-detail { font-size: 16px; color: var(--ink-dim); line-height: 1.7; padding-top: 8px; }
 .modal-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px; }
 .modal-links { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px; }
-.modal-link { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--ink-dim); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 12px; text-decoration: none; transition: color 0.2s ease, border-color 0.2s ease; }
-.modal-link:hover { color: var(--ink); border-color: var(--ink-mute); }
+.modal-link { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; border: 1px solid; border-radius: 4px; padding: 6px 12px; text-decoration: none; transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
+.modal-link--github   { color: #a78bfa; border-color: rgba(167,139,250,0.3); }
+.modal-link--github:hover   { color: #c4b5fd; border-color: rgba(167,139,250,0.7); background: rgba(167,139,250,0.06); }
+.modal-link--devpost  { color: #38bdf8; border-color: rgba(56,189,248,0.3); }
+.modal-link--devpost:hover  { color: #7dd3fc; border-color: rgba(56,189,248,0.7); background: rgba(56,189,248,0.06); }
+.modal-link--figma    { color: #fb7185; border-color: rgba(251,113,133,0.3); }
+.modal-link--figma:hover    { color: #fda4af; border-color: rgba(251,113,133,0.7); background: rgba(251,113,133,0.06); }
+.modal-link--demo     { color: #34d399; border-color: rgba(52,211,153,0.3); }
+.modal-link--demo:hover     { color: #6ee7b7; border-color: rgba(52,211,153,0.7); background: rgba(52,211,153,0.06); }
+.modal-link--appstore { color: #60a5fa; border-color: rgba(96,165,250,0.3); }
+.modal-link--appstore:hover { color: #93c5fd; border-color: rgba(96,165,250,0.7); background: rgba(96,165,250,0.06); }
+.modal-link--itchio   { color: #f87171; border-color: rgba(248,113,113,0.3); }
+.modal-link--itchio:hover   { color: #fca5a5; border-color: rgba(248,113,113,0.7); background: rgba(248,113,113,0.06); }
 
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 .foot {
