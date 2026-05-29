@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { initNeuralNetwork, triggerNeuralReveal } from '@/lib/neural-network';
 
 // ─── IntersectionObserver hook ────────────────────────────────────────────────
@@ -630,13 +630,21 @@ function Portfolio({ revealed, openModal }) {
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 function App() {
-  const seen = typeof window !== 'undefined' && !!sessionStorage.getItem('introSeen');
-  const [stage, setStage] = useState(seen ? 'revealed' : 'intro');
-  const [showIntro, setShowIntro] = useState(!seen);
-  const [showCursorLabel, setShowCursorLabel] = useState(seen);
+  const [stage, setStage] = useState('revealed');
+  const [showIntro, setShowIntro] = useState(false);
+  const [showCursorLabel, setShowCursorLabel] = useState(false);
   const [modal, setModal] = useState(null);
   const openModal  = (item, type) => setModal({ item, type });
   const closeModal = () => setModal(null);
+
+  useLayoutEffect(() => {
+    if (!sessionStorage.getItem('introSeen')) {
+      setShowIntro(true);
+      setStage('intro');
+    } else {
+      setShowCursorLabel(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (stage !== 'revealed') return;
