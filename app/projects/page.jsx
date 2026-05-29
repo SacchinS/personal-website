@@ -100,8 +100,8 @@ const ALL_PROJECTS = [
   {
     n: '01', title: 'Sixers Fantasy', year: 'Oct 2025 – Present', status: 'Active',
     image: '/images/sixers-fantasy.png',
-    blurb: 'Full-stack fantasy cricket platform built from scratch — live scoring, trades, and multi-tenant leagues.',
-    detail: 'Built the entire product for a fantasy cricket startup. Engineered a ball-by-ball live scoring engine in Next.js and TypeScript tracking runs, wickets, extras, and player stats (batting, bowling, fielding) with undo capability and automatic innings switching. Implemented a trade and waiver wire system across AWS Lambda with pessimistic locking to prevent race conditions under concurrent writes. Designed a multi-tenant league dashboard scoped per user via Amazon Cognito, backed by PostgreSQL RDS with a relational schema spanning leagues, seasons, teams, players, and per-ball timeline events.',
+    blurb: 'Fantasy cricket platform — engineered the ball-by-ball live scoring engine and trade/waiver wire system.',
+    detail: 'Engineered the live scoring and trade infrastructure for a fantasy cricket startup. The scoring engine tracks ball-by-ball events — runs, wickets, extras, and per-player stats (batting, bowling, fielding) — with undo support and automatic innings switching. The trade and waiver wire system uses pessimistic locking across AWS Lambda to handle concurrent writes without race conditions, backed by PostgreSQL RDS and scoped per-user via Amazon Cognito.',
     tags: ['Next.js', 'TypeScript', 'AWS Lambda', 'PostgreSQL', 'Amazon Cognito'],
   },
   {
