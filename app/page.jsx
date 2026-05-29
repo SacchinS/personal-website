@@ -316,22 +316,19 @@ function About() {
         <div className="about-grid">
           <div className="about-text">
             <p className="about-lede">
-              I think in <em>systems</em>, the kind that look messy from a distance
-              and obvious up close. I build software, study how attention moves,
-              and try to make tools that respect both.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <p className="about-body">
-              Currently obsessed with the seams between machine learning,
-              interface design, and the small rituals of how people get work done.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
           <aside className="about-aside">
             <dl className="meta-list">
               <div><dt>Based in</dt><dd>Seattle, WA</dd></div>
-              <div><dt>Working on</dt><dd>Fantasy cricket platform + CV research</dd></div>
-              <div><dt>Reading</dt><dd>The Beginning of Infinity</dd></div>
-              <div><dt>Studying</dt><dd>BS CS, University of Washington (2027)</dd></div>
-              <div><dt>Off-keyboard</dt><dd>Long walks, film cameras, jazz piano</dd></div>
+              <div><dt>Working on</dt><dd>Fantasy cricket + accessible tech</dd></div>
+              <div><dt>Reading</dt><dd>The Overton Window</dd></div>
+              <div><dt>Studying</dt><dd>BS CS, University of Washington (2028)</dd></div>
+              <div><dt>Off-keyboard</dt><dd>Sports, guitar, movies</dd></div>
             </dl>
           </aside>
         </div>
