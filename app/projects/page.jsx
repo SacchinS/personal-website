@@ -140,7 +140,7 @@ const ALL_PROJECTS = [
     tags: ['PyTorch', 'OwlViT', 'OpenCV', 'LibTorch'],
   },
   {
-    n: '07', title: 'Foliage', year: '2024 to 2025', status: 'Shipped',
+    n: '07', title: 'Foliage', year: 'Dec 2024 – Jun 2025', status: 'Shipped',
     image: '/images/foliage.png',
     blurb: 'Career discovery platform helping students find the right internship path.',
     detail: 'Led a 3-person team to ship a student internship discovery platform. Integrated Gemini 1.5 Flash to recommend internship categories after survey feedback from 50 users showed 38% were unsure which paths to pursue. Built a Django backend with GraphQL, PostgreSQL, and AWS RDS, with role-based access for admins, employers, and students.',
