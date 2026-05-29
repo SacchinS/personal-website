@@ -640,9 +640,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .modal-period { font-family: var(--mono); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-mute); }
 .modal-status {
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-  padding: 4px 10px; border-radius: 2px;
+  padding: 4px 10px; border-radius: 2px; border: 1px solid;
 }
+.modal-status--active { color: #4ade80; border-color: rgba(74,222,128,0.3); }
+.modal-status--place  { color: #fbbf24; border-color: rgba(251,191,36,0.3); }
 .modal-title {
   font-family: var(--serif); font-weight: 300;
   font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.01em; color: var(--ink);

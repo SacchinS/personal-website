@@ -257,7 +257,8 @@ function Modal({ item, type, onClose }) {
           <div className="modal-body">
             <div className="modal-header">
               <span className="modal-n">{item.n}</span>
-              {item.status && <span className="modal-status">{item.status}</span>}
+              {item.status === 'Active' && <span className="modal-status modal-status--active">{item.status}</span>}
+              {item.status?.includes('Place') && <span className="modal-status modal-status--place">{item.status}</span>}
             </div>
             <h2 className="modal-title">{item.title}</h2>
             <p className="modal-year">{item.year}</p>
