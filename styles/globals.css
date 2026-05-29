@@ -650,6 +650,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .modal-year, .modal-org { font-family: var(--mono); font-size: 13px; letter-spacing: 0.13em; color: var(--ink-mute); text-transform: uppercase; }
 .modal-detail { font-size: 16px; color: var(--ink-dim); line-height: 1.7; padding-top: 8px; }
 .modal-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px; }
+.modal-links { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px; }
+.modal-link { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--ink-dim); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 12px; text-decoration: none; transition: color 0.2s ease, border-color 0.2s ease; }
+.modal-link:hover { color: var(--ink); border-color: var(--ink-mute); }
 
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 .foot {

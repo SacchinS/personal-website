@@ -265,6 +265,15 @@ function Modal({ item, type, onClose }) {
             <div className="modal-tags">
               {item.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
+            {item.links && item.links.length > 0 && (
+              <div className="modal-links">
+                {item.links.map(({ label, url }) => (
+                  <a key={url} href={url} target="_blank" rel="noreferrer" className="modal-link">
+                    {label} <span>↗</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         ) : (
           <div className="modal-body">
@@ -410,6 +419,7 @@ const PROJECTS = [
     blurb: 'Fantasy cricket platform. Engineered the ball-by-ball live scoring engine and trade/waiver wire system.',
     detail: 'Engineered the live scoring and trade infrastructure for a fantasy cricket startup. The scoring engine tracks ball-by-ball events (runs, wickets, extras, and per-player stats: batting, bowling, fielding) with undo support and automatic innings switching. The trade and waiver wire system uses pessimistic locking across AWS Lambda to handle concurrent writes without race conditions, backed by PostgreSQL RDS and scoped per-user via Amazon Cognito.',
     tags: ['Next.js', 'TypeScript', 'AWS Lambda', 'PostgreSQL', 'Amazon Cognito'],
+    links: [{ label: 'GitHub', url: 'https://github.com/orgs/SixersApp/repositories' }],
   },
   {
     n: '02', title: 'Kural', year: 'May 2026', status: '1st Place',
@@ -417,6 +427,7 @@ const PROJECTS = [
     blurb: 'AI-powered AAC device for ALS patients that speaks in their own cloned voice.',
     detail: 'AWS Hacks 2026, 1st Place (Cloud for Good Track). Generates contextually personalized sentences via Amazon Bedrock (Claude Haiku 4.5) and speaks them in the patient\'s preserved voice. Fine-tuned Coqui XTTS v2 on SageMaker (ml.g4dn.xlarge) on 30 personal recordings, achieving 20-25 second end-to-end latency. Shipped a Next.js PWA with iOS Eye Tracking auto-click selection, Amazon Cognito auth, offline fallback, and a real-time caregiver context panel.',
     tags: ['AWS Bedrock', 'SageMaker', 'Lambda', 'Next.js'],
+    links: [{ label: 'Devpost', url: 'https://devpost.com/software/kural-gxylzb' }],
   },
   {
     n: '03', title: 'Husky Robotics', year: '2025', status: 'Active',
@@ -424,6 +435,7 @@ const PROJECTS = [
     blurb: 'Zero-shot object detection pipeline for the University Rover Challenge.',
     detail: 'Selected OwlViT for zero-shot object detection to avoid custom dataset collection for competition-specific targets. Reached 94% detection accuracy across 70+ simulated rover-field tests covering variable lighting, angles, and occlusion. Preprocessed live camera frames with OpenCV, resizing to 768x768 before real-time confidence-scored detection.',
     tags: ['PyTorch', 'OwlViT', 'OpenCV', 'LibTorch'],
+    links: [{ label: 'GitHub', url: 'https://github.com/SacchinS/husky-robotics' }],
   },
   {
     n: '04', title: 'Nudge', year: 'Jan 2026', status: '1st Place',
@@ -431,6 +443,7 @@ const PROJECTS = [
     blurb: 'iOS app that surfaces task breakdowns in your Dynamic Island.',
     detail: 'WINFO 2026, 1st Place (Best Implementation Track). Native iOS productivity app using MVVM to convert large tasks into ordered subtasks surfaced through Dynamic Island and WidgetKit. Backed by a Node.js/Express API proxying OpenAI requests, with JSON schema validation and fallback parsing for malformed GPT output.',
     tags: ['Swift', 'SwiftUI', 'Node.js', 'OpenAI'],
+    links: [{ label: 'Demo', url: 'https://tinyurl.com/nudge-winfo' }],
   },
   {
     n: '05', title: 'Foliage', year: 'Dec 2024 – Jun 2025', status: 'Shipped',
@@ -438,6 +451,10 @@ const PROJECTS = [
     blurb: 'Career discovery platform helping students find the right internship path.',
     detail: 'Led a 3-person team to ship a student internship discovery platform. Integrated Gemini 1.5 Flash to recommend internship categories after survey feedback from 50 users showed 38% were unsure which paths to pursue. Built a Django backend with GraphQL, PostgreSQL, and AWS RDS, with role-based access for admins, employers, and students.',
     tags: ['Next.js', 'Django', 'GraphQL', 'PostgreSQL', 'Gemini'],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/SacchinS/foliage-final-build' },
+      { label: 'Figma', url: 'https://www.figma.com/design/VFJnmyeaUFMeupe4SkF2Ag/Foliage-Mockup?node-id=0-1&t=9hjpk3i0HQCcL2uW-1' },
+    ],
   },
 ];
 
