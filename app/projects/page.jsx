@@ -100,8 +100,8 @@ const ALL_PROJECTS = [
   {
     n: '01', title: 'Sixers Fantasy', year: 'Oct 2025 – Present', status: 'Active',
     image: '/images/sixers-fantasy.png',
-    blurb: 'Fantasy cricket platform — engineered the ball-by-ball live scoring engine and trade/waiver wire system.',
-    detail: 'Engineered the live scoring and trade infrastructure for a fantasy cricket startup. The scoring engine tracks ball-by-ball events — runs, wickets, extras, and per-player stats (batting, bowling, fielding) — with undo support and automatic innings switching. The trade and waiver wire system uses pessimistic locking across AWS Lambda to handle concurrent writes without race conditions, backed by PostgreSQL RDS and scoped per-user via Amazon Cognito.',
+    blurb: 'Fantasy cricket platform. Engineered the ball-by-ball live scoring engine and trade/waiver wire system.',
+    detail: 'Engineered the live scoring and trade infrastructure for a fantasy cricket startup. The scoring engine tracks ball-by-ball events (runs, wickets, extras, and per-player stats: batting, bowling, fielding) with undo support and automatic innings switching. The trade and waiver wire system uses pessimistic locking across AWS Lambda to handle concurrent writes without race conditions, backed by PostgreSQL RDS and scoped per-user via Amazon Cognito.',
     tags: ['Next.js', 'TypeScript', 'AWS Lambda', 'PostgreSQL', 'Amazon Cognito'],
   },
   {
@@ -143,7 +143,7 @@ const ALL_PROJECTS = [
     n: '07', title: 'LeetRepeat', year: 'May 2025', status: 'Active',
     image: '/images/leetrepeat.png',
     blurb: 'Chrome extension that brings Anki-style spaced repetition to LeetCode practice.',
-    detail: 'Built a Manifest V3 Chrome extension that schedules LeetCode problems using the SM-2 spaced repetition algorithm — the same system behind Anki. On first install, a content script imports the user\'s full solve history via LeetCode\'s internal GraphQL API (same-origin, no credentials needed) and assigns staggered initial due dates based on how long ago each problem was solved. Submission detection runs via MutationObserver — when an "Accepted" verdict appears, a rating modal surfaces (Easy / Medium / Hard) and SM-2 updates the next interval. Missed days shift all due dates forward by the number of skipped days, preserving relative spacing without creating a review avalanche. The popup dashboard includes today\'s queue, a calendar heatmap, weak-area breakdown by tag, and a settings panel for daily target and new/review blend ratio.',
+    detail: 'Built a Manifest V3 Chrome extension that schedules LeetCode problems using the SM-2 spaced repetition algorithm, the same system behind Anki. On first install, a content script imports the user\'s full solve history via LeetCode\'s internal GraphQL API (same-origin, no credentials needed) and assigns staggered initial due dates based on how long ago each problem was solved. Submission detection runs via MutationObserver. When an "Accepted" verdict appears, a rating modal surfaces (Easy / Medium / Hard) and SM-2 updates the next interval. Missed days shift all due dates forward by the number of skipped days, preserving relative spacing without creating a review avalanche. The popup dashboard includes today\'s queue, a calendar heatmap, weak-area breakdown by tag, and a settings panel for daily target and new/review blend ratio.',
     tags: ['Chrome Extension', 'JavaScript', 'SM-2', 'GraphQL'],
   },
   {
@@ -161,7 +161,7 @@ const ALL_PROJECTS = [
     tags: ['Next.js', 'React', 'Tailwind CSS', 'Firebase', 'Figma', 'Framer Motion'],
   },
   {
-    n: '10', title: 'ShapeShift — Learn!', year: 'Mar 2022 – Oct 2023', status: 'Shipped',
+    n: '10', title: 'ShapeShift: Learn!', year: 'Mar 2022 – Oct 2023', status: 'Shipped',
     image: '/images/shapeshift.png',
     blurb: 'iOS educational game covering K–5 LWSD geometry standards, published to the App Store.',
     detail: 'Developed an interactive educational game aligned to K–5 LWSD geometry standards using Unity and C#. Designed all UI and sprites in Adobe Photoshop and Illustrator. To publish on the iOS App Store, founded Saper Solutions LLC, registered a domain via IONOS, and built a compliance website (privacy policy) with Next.js, Tailwind CSS, and React deployed on Vercel. Published the app under Saper Solutions LLC on both the iOS App Store and itch.io.',
