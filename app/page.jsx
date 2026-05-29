@@ -447,7 +447,7 @@ const PROJECTS = [
     links: [{ label: 'Demo', url: 'https://tinyurl.com/nudge-winfo' }],
   },
   {
-    n: '05', title: 'Foliage', year: 'Dec 2024 – Jun 2025', status: 'Shipped',
+    n: '05', title: 'Foliage', year: 'Dec 2024 – Jun 2025', status: '3rd Place State',
     image: '/images/foliage.png',
     blurb: 'Career discovery platform helping students find the right internship path.',
     detail: 'Led a 3-person team to ship a student internship discovery platform. Integrated Gemini 1.5 Flash to recommend internship categories after survey feedback from 50 users showed 38% were unsure which paths to pursue. Built a Django backend with GraphQL, PostgreSQL, and AWS RDS, with role-based access for admins, employers, and students.',

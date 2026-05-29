@@ -156,7 +156,7 @@ const ALL_PROJECTS = [
     links: [{ label: 'GitHub', url: 'https://github.com/SacchinS/husky-robotics' }],
   },
   {
-    n: '07', title: 'Foliage', year: 'Dec 2024 – Jun 2025', status: 'Shipped',
+    n: '07', title: 'Foliage', year: 'Dec 2024 – Jun 2025', status: '3rd Place State',
     image: '/images/foliage.png',
     blurb: 'Career discovery platform helping students find the right internship path.',
     detail: 'Led a 3-person team to ship a student internship discovery platform. Integrated Gemini 1.5 Flash to recommend internship categories after survey feedback from 50 users showed 38% were unsure which paths to pursue. Built a Django backend with GraphQL, PostgreSQL, and AWS RDS, with role-based access for admins, employers, and students.',
@@ -167,7 +167,7 @@ const ALL_PROJECTS = [
     ],
   },
   {
-    n: '08', title: 'Gladiator Games', year: 'Dec 2023 – Jun 2024', status: 'TSA Nationals',
+    n: '08', title: 'Gladiator Games', year: 'Dec 2023 – Jun 2024', status: '10th Place Nationals',
     image: '/images/gladiator-games.png',
     blurb: 'VR fitness game tackling childhood obesity through gamified full-body exercise.',
     detail: 'Built for the TSA VR Simulation event at Tesla STEM High School. Addressed childhood obesity by turning physical exercise into a competitive VR experience. Integrated Meta Quest (Oculus) with the Unity Game Engine, using custom C# scripts for full-body tracking, motion detection, and haptic feedback. Created all 3D models and environments in Blender, and produced animations and a video trailer directly in Unity. Also developed the project documentation portfolio and companion website. Placed 10th at TSA Nationals.',
