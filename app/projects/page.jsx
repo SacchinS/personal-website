@@ -161,18 +161,18 @@ const ALL_PROJECTS = [
     tags: ['Next.js', 'React', 'Tailwind CSS', 'Firebase', 'Figma', 'Framer Motion'],
   },
   {
-    n: '10', title: 'The Last Iceberg', year: 'Apr 2023 – Jun 2023', status: 'Shipped',
-    image: '/images/last-iceberg.png',
-    blurb: 'Web-based game teaching students how ocean shipping contributes to climate change.',
-    detail: 'Developed an educational game using Unity and C# focused on ocean travel and its impact on climate change, letting players modify ships to reduce their environmental footprint. Presented the game live at Margaret Mead Elementary School\'s science fair, where students engaged directly with the interactive content. Designed all UI and sprites in Adobe Photoshop and Illustrator. Published the web build demo to itch.io.',
-    tags: ['Unity', 'C#', 'Adobe Photoshop', 'Game Design', 'itch.io'],
-  },
-  {
-    n: '11', title: 'ShapeShift: Learn!', year: 'Mar 2022 – Oct 2023', status: 'Shipped',
+    n: '10', title: 'ShapeShift: Learn!', year: 'Mar 2022 – Oct 2023', status: 'Shipped',
     image: '/images/shapeshift.png',
     blurb: 'iOS educational game covering K–5 LWSD geometry standards, published to the App Store.',
     detail: 'Developed an interactive educational game aligned to K–5 LWSD geometry standards using Unity and C#. Designed all UI and sprites in Adobe Photoshop and Illustrator. To publish on the iOS App Store, founded Saper Solutions LLC, registered a domain via IONOS, and built a compliance website (privacy policy) with Next.js, Tailwind CSS, and React deployed on Vercel. Published the app under Saper Solutions LLC on both the iOS App Store and itch.io.',
     tags: ['Unity', 'C#', 'iOS', 'Next.js', 'Adobe Illustrator'],
+  },
+  {
+    n: '11', title: 'The Last Iceberg', year: 'Apr 2023 – Jun 2023', status: 'Shipped',
+    image: '/images/last-iceberg.png',
+    blurb: 'Web-based game teaching students how ocean shipping contributes to climate change.',
+    detail: 'Developed an educational game using Unity and C# focused on ocean travel and its impact on climate change, letting players modify ships to reduce their environmental footprint. Presented the game live at Margaret Mead Elementary School\'s science fair, where students engaged directly with the interactive content. Designed all UI and sprites in Adobe Photoshop and Illustrator. Published the web build demo to itch.io.',
+    tags: ['Unity', 'C#', 'Adobe Photoshop', 'Game Design', 'itch.io'],
   },
   // ── Add more projects below this line ──────────────────────────────────────
 ];
