@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 
 export const metadata = {
-  title: 'sacchin.',
+  title: 'Sacchin',
 };
 
 export default function RootLayout({ children }) {
