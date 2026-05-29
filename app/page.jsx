@@ -316,10 +316,10 @@ function About() {
         <div className="about-grid">
           <div className="about-text">
             <p className="about-lede">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              My interest in programming started during the pandemic when I taught myself to build games in Unity, not because I enjoyed playing them, but because I liked watching other people play them.
             </p>
             <p className="about-body">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              You start to despise your own game after testing it hundreds of times, but seeing someone else enjoy it never got old. That feeling has driven everything I've built since, and as I've grown as a developer, so has the scale of impact I want to create.
             </p>
           </div>
           <aside className="about-aside">
