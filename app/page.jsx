@@ -632,21 +632,13 @@ function Portfolio({ revealed, openModal }) {
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 function App() {
-  const [stage, setStage] = useState('intro');
-  const [showIntro, setShowIntro] = useState(true);
-  const [showCursorLabel, setShowCursorLabel] = useState(false);
+  const seen = typeof window !== 'undefined' && !!sessionStorage.getItem('introSeen');
+  const [stage, setStage] = useState(seen ? 'revealed' : 'intro');
+  const [showIntro, setShowIntro] = useState(!seen);
+  const [showCursorLabel, setShowCursorLabel] = useState(seen);
   const [modal, setModal] = useState(null);
   const openModal  = (item, type) => setModal({ item, type });
   const closeModal = () => setModal(null);
-
-  // Skip intro if already seen this session
-  useEffect(() => {
-    if (sessionStorage.getItem('introSeen')) {
-      setStage('revealed');
-      setShowIntro(false);
-      setShowCursorLabel(true);
-    }
-  }, []);
 
   useEffect(() => {
     if (stage !== 'revealed') return;
