@@ -98,46 +98,46 @@ function Nav() {
 // ─── All Projects data ────────────────────────────────────────────────────────
 const ALL_PROJECTS = [
   {
-    n: '01', title: 'Kural', year: 'May 2026', status: '1st Place',
+    n: '01', title: 'Sixers Fantasy', year: 'Oct 2025 – Present', status: 'Active',
+    image: '/images/sixers-fantasy.png',
+    blurb: 'Full-stack fantasy cricket platform built from scratch — live scoring, trades, and multi-tenant leagues.',
+    detail: 'Built the entire product for a fantasy cricket startup. Engineered a ball-by-ball live scoring engine in Next.js and TypeScript tracking runs, wickets, extras, and player stats (batting, bowling, fielding) with undo capability and automatic innings switching. Implemented a trade and waiver wire system across AWS Lambda with pessimistic locking to prevent race conditions under concurrent writes. Designed a multi-tenant league dashboard scoped per user via Amazon Cognito, backed by PostgreSQL RDS with a relational schema spanning leagues, seasons, teams, players, and per-ball timeline events.',
+    tags: ['Next.js', 'TypeScript', 'AWS Lambda', 'PostgreSQL', 'Amazon Cognito'],
+  },
+  {
+    n: '02', title: 'Kural', year: 'May 2026', status: '1st Place',
     image: '/images/kural.png',
     blurb: 'AI-powered AAC device for ALS patients that speaks in their own cloned voice.',
     detail: 'AWS Hacks 2026, 1st Place (Cloud for Good Track). Generates contextually personalized sentences via Amazon Bedrock (Claude Haiku 4.5) and speaks them in the patient\'s preserved voice. Fine-tuned Coqui XTTS v2 on SageMaker (ml.g4dn.xlarge) on 30 personal recordings, achieving 20-25 second end-to-end latency. Shipped a Next.js PWA with iOS Eye Tracking auto-click selection, Amazon Cognito auth, offline fallback, and a real-time caregiver context panel.',
     tags: ['AWS Bedrock', 'SageMaker', 'Lambda', 'Next.js'],
   },
   {
-    n: '02', title: 'Husky Robotics', year: '2025', status: 'Active',
+    n: '03', title: 'Husky Robotics', year: '2025', status: 'Active',
     image: '/images/husky-robotics.png',
     blurb: 'Zero-shot object detection pipeline for the University Rover Challenge.',
     detail: 'Selected OwlViT for zero-shot object detection to avoid custom dataset collection for competition-specific targets. Reached 94% detection accuracy across 70+ simulated rover-field tests covering variable lighting, angles, and occlusion. Preprocessed live camera frames with OpenCV, resizing to 768x768 before real-time confidence-scored detection.',
     tags: ['PyTorch', 'OwlViT', 'OpenCV', 'LibTorch'],
   },
   {
-    n: '03', title: 'Nudge', year: 'Jan 2026', status: '1st Place',
+    n: '04', title: 'Nudge', year: 'Jan 2026', status: '1st Place',
     image: '/images/nudge.png', portrait: true,
     blurb: 'iOS app that surfaces task breakdowns in your Dynamic Island.',
     detail: 'WINFO 2026, 1st Place (Best Implementation Track). Native iOS productivity app using MVVM to convert large tasks into ordered subtasks surfaced through Dynamic Island and WidgetKit. Backed by a Node.js/Express API proxying OpenAI requests, with JSON schema validation and fallback parsing for malformed GPT output.',
     tags: ['Swift', 'SwiftUI', 'Node.js', 'OpenAI'],
   },
   {
-    n: '04', title: 'Taskflow', year: 'Oct 2025', status: '1st Place',
+    n: '05', title: 'Taskflow', year: 'Oct 2025', status: '1st Place',
     image: '/images/taskflow.png', portrait: true,
     blurb: 'Chrome extension that converts assignment screenshots into Jira tasks instantly.',
     detail: 'DubHacks 2025, 1st Place (Atlassian Track). Uses OpenAI OCR to parse assignment screenshots into structured Kanban tasks across Canvas, Gradescope, and course websites. Integrated the Atlassian Rovo Agent API to automate Jira issue creation and board synchronization, cutting task entry to a single screenshot.',
     tags: ['Chrome Extension', 'Atlassian Forge', 'OpenAI', 'Jira'],
   },
   {
-    n: '05', title: 'Foliage', year: '2024 to 2025', status: 'Shipped',
+    n: '06', title: 'Foliage', year: '2024 to 2025', status: 'Shipped',
     image: '/images/foliage.png',
     blurb: 'Career discovery platform helping students find the right internship path.',
     detail: 'Led a 3-person team to ship a student internship discovery platform. Integrated Gemini 1.5 Flash to recommend internship categories after survey feedback from 50 users showed 38% were unsure which paths to pursue. Built a Django backend with GraphQL, PostgreSQL, and AWS RDS, with role-based access for admins, employers, and students.',
     tags: ['Next.js', 'Django', 'GraphQL', 'PostgreSQL', 'Gemini'],
-  },
-  {
-    n: '06', title: 'Sixers Fantasy', year: 'Oct 2025 – Present', status: 'Active',
-    image: '/images/sixers-fantasy.png',
-    blurb: 'Full-stack fantasy cricket platform built from scratch — live scoring, trades, and multi-tenant leagues.',
-    detail: 'Built the entire product for a fantasy cricket startup. Engineered a ball-by-ball live scoring engine in Next.js and TypeScript tracking runs, wickets, extras, and player stats (batting, bowling, fielding) with undo capability and automatic innings switching. Implemented a trade and waiver wire system across AWS Lambda with pessimistic locking to prevent race conditions under concurrent writes. Designed a multi-tenant league dashboard scoped per user via Amazon Cognito, backed by PostgreSQL RDS with a relational schema spanning leagues, seasons, teams, players, and per-ball timeline events.',
-    tags: ['Next.js', 'TypeScript', 'AWS Lambda', 'PostgreSQL', 'Amazon Cognito'],
   },
   {
     n: '07', title: 'LeetRepeat', year: 'May 2025', status: 'Active',
