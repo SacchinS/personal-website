@@ -39,6 +39,15 @@ function XIcon() {
     </svg>
   );
 }
+function MenuIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="2"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+  );
+}
 function ArrowUpRightIcon({ size = 16 }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
@@ -592,22 +601,37 @@ function Contact() {
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
 function Nav({ visible, pastHero }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const close = () => setMenuOpen(false);
+
   const scrollToTop = e => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    close();
   };
+
+  useEffect(() => {
+    const onKey = e => { if (e.key === 'Escape') close(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, []);
+
   return (
-    <nav className={`nav ${visible ? 'is-visible' : ''}`}>
+    <nav className={`nav ${visible ? 'is-visible' : ''} ${menuOpen ? 'menu-open' : ''}`}>
       <a href="#" className={`nav__brand ${pastHero ? 'brand-visible' : ''}`} onClick={scrollToTop}>
         SS
       </a>
       <ul className="nav__list">
         {['about','experience','projects','skills','contact'].map(id => (
           <li key={id}>
-            <a href={id === 'projects' ? '/projects' : `#${id}`}>{id}</a>
+            <a href={id === 'projects' ? '/projects' : `#${id}`} onClick={close}>{id}</a>
           </li>
         ))}
       </ul>
+      <button className="nav__toggle" onClick={() => setMenuOpen(o => !o)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
+        {menuOpen ? <XIcon /> : <MenuIcon />}
+      </button>
     </nav>
   );
 }

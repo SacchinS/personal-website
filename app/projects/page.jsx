@@ -20,6 +20,15 @@ function useInView(threshold = 0.1) {
 }
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
+function MenuIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="2"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+  );
+}
 function ArrowUpRightIcon({ size = 16 }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
@@ -94,8 +103,17 @@ function Modal({ item, onClose }) {
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
 function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const close = () => setMenuOpen(false);
+
+  useEffect(() => {
+    const onKey = e => { if (e.key === 'Escape') close(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, []);
+
   return (
-    <nav className="nav is-visible">
+    <nav className={`nav is-visible ${menuOpen ? 'menu-open' : ''}`}>
       <a href="/" className="nav__brand brand-visible">SS</a>
       <ul className="nav__list">
         {[
@@ -106,10 +124,14 @@ function Nav() {
           { label: 'contact',    href: '/#contact' },
         ].map(({ label, href, active }) => (
           <li key={label}>
-            <a href={href} className={active ? 'is-active' : ''}>{label}</a>
+            <a href={href} className={active ? 'is-active' : ''} onClick={close}>{label}</a>
           </li>
         ))}
       </ul>
+      <button className="nav__toggle" onClick={() => setMenuOpen(o => !o)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
+        {menuOpen ? <XIcon /> : <MenuIcon />}
+      </button>
     </nav>
   );
 }
