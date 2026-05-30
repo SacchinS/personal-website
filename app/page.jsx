@@ -407,9 +407,14 @@ function Experience({ openModal }) {
               onKeyDown={ev => { if (ev.key === 'Enter') openModal(e, 'experience'); }}>
               <div className="timeline-dot" />
               <div className="timeline-body">
-                <span className="timeline-period">{e.period}</span>
-                <h3 className="timeline-role">{e.role}</h3>
-                <span className="timeline-org">{e.org}</span>
+                <div className="timeline-header">
+                  <div className="timeline-meta">
+                    <span className="timeline-period">{e.period}</span>
+                    <h3 className="timeline-role">{e.role}</h3>
+                    <span className="timeline-org">{e.org}</span>
+                  </div>
+                  {e.logo && <img className="timeline-logo--mobile" src={e.logo} alt="" aria-hidden="true" />}
+                </div>
                 <p className="timeline-detail">{e.detail}</p>
               </div>
               <div className="timeline-right">
