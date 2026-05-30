@@ -630,7 +630,7 @@ function Portfolio({ revealed, openModal }) {
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 function App() {
-  const [stage, setStage] = useState('revealed');
+  const [stage, setStage] = useState('intro');
   const [showIntro, setShowIntro] = useState(false);
   const [showCursorLabel, setShowCursorLabel] = useState(false);
   const [modal, setModal] = useState(null);
