@@ -640,8 +640,8 @@ function App() {
   useLayoutEffect(() => {
     if (!sessionStorage.getItem('introSeen')) {
       setShowIntro(true);
-      setStage('intro');
     } else {
+      setStage('revealed');
       setShowCursorLabel(true);
     }
   }, []);
