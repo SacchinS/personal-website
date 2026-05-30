@@ -175,10 +175,16 @@ function WordSplit({ text }) {
 
 function Intro({ onSwitch, isExiting }) {
   const [beatIndex, setBeatIndex] = useState(0);
-  const [phase, setPhase] = useState('entering');
+  const [phase, setPhase] = useState('idle');
   const [activated, setActivated] = useState(false);
 
   useEffect(() => {
+    const raf = requestAnimationFrame(() => setPhase('entering'));
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  useEffect(() => {
+    if (phase === 'idle') return;
     const beat = INTRO_BEATS[beatIndex];
     if (beat.persist) return;
     const wordCount = beat.text.split(' ').length;
