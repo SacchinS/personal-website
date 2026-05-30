@@ -364,7 +364,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding-top: 20px; /* skip past the period row — aligns logo top with role title */
 }
 .timeline-arrow {
-  font-size: 18px; color: var(--ink-mute);
+  display: flex; align-items: center;
+  color: var(--ink-mute);
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .timeline-item:hover .timeline-arrow { color: var(--ink); transform: translate(2px, -2px); }
@@ -383,8 +384,19 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .timeline-item:hover .timeline-logo { filter: grayscale(0); opacity: 1; }
 
 @media (max-width: 600px) {
-  .timeline-item { grid-template-columns: 1fr; }
-  .timeline-right { display: none; }
+  .timeline-item { grid-template-columns: 1fr auto; align-items: start; }
+  .timeline-right {
+    padding-top: 0;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .timeline-logo {
+    max-width: 40px;
+    height: 40px;
+    filter: grayscale(0);
+    opacity: 0.85;
+  }
 }
 
 /* ─── Projects page shell ─────────────────────────────────────────────────── */
@@ -481,7 +493,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .proj-card__foot { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px; }
 .proj-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .proj-card__arrow {
-  font-size: 18px; color: var(--ink-mute);
+  display: flex; align-items: center;
+  color: var(--ink-mute);
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .proj-card:hover .proj-card__arrow { color: var(--ink); transform: translate(2px, -2px); }
@@ -718,3 +731,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 /* No cursor label on touch devices */
 @media (hover: none) { .cursor-label-wrap { display: none; } }
+
+/* Touch devices: images always colorized since there's no hover */
+@media (hover: none) {
+  .proj-card__img { filter: grayscale(0); opacity: 1; }
+  .timeline-logo { filter: grayscale(0); opacity: 1; }
+}

@@ -39,6 +39,15 @@ function XIcon() {
     </svg>
   );
 }
+function ArrowUpRightIcon({ size = 16 }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="2"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+    </svg>
+  );
+}
 
 // ─── Cursor label ────────────────────────────────────────────────────────────
 const SCROLL_CHARS = 'SCROLL • SCROLL • '.split('');
@@ -276,7 +285,7 @@ function Modal({ item, type, onClose }) {
               <div className="modal-links">
                 {item.links.map(({ label, url }) => (
                   <a key={url} href={url} target="_blank" rel="noreferrer" className={`modal-link modal-link--${label.toLowerCase().replace(/[^a-z]/g, '')}`}>
-                    {label} <span>↗</span>
+                    {label} <ArrowUpRightIcon size={14} />
                   </a>
                 ))}
               </div>
@@ -405,7 +414,7 @@ function Experience({ openModal }) {
               </div>
               <div className="timeline-right">
                 {e.logo && <img className="timeline-logo" src={e.logo} alt={e.org} />}
-                <span className="timeline-arrow">↗</span>
+                <span className="timeline-arrow"><ArrowUpRightIcon size={16} /></span>
               </div>
             </div>
           ))}
@@ -486,7 +495,7 @@ function Projects({ openModal }) {
                 <div className="proj-card__tags">
                   {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
-                <span className="proj-card__arrow">↗</span>
+                <span className="proj-card__arrow"><ArrowUpRightIcon size={16} /></span>
               </div>
             </div>
           ))}
@@ -502,7 +511,7 @@ function Projects({ openModal }) {
             <p className="proj-card__blurb">See the full archive of things I've built.</p>
             <div className="proj-card__foot">
               <div className="proj-card__tags" />
-              <span className="proj-card__arrow">↗</span>
+              <span className="proj-card__arrow"><ArrowUpRightIcon size={16} /></span>
             </div>
           </a>
         </div>
@@ -568,7 +577,7 @@ function Contact() {
             ['LinkedIn', 'https://linkedin.com/in/sacchin-saravanan'],
             ['Resume',   'https://drive.google.com/file/d/124hCsXsCfSdje5JPvOK7ysw2Z1OUjrIb/view?usp=sharing'],
           ].map(([label, href]) => (
-            <li key={label}><a href={href} target="_blank" rel="noreferrer">{label} <span>↗</span></a></li>
+            <li key={label}><a href={href} target="_blank" rel="noreferrer">{label} <ArrowUpRightIcon size={14} /></a></li>
           ))}
         </ul>
       </div>
