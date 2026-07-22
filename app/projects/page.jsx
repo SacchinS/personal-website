@@ -155,7 +155,7 @@ const ALL_PROJECTS = [
     links: [{ label: 'GitHub', url: 'https://github.com/orgs/SixersApp/repositories' }],
   },
   {
-    n: '03', title: 'Kural', year: 'May 2026', status: '1st Place',
+    n: '03', title: 'Kural', year: 'May 2026', status: '1st Place', gold: true,
     image: '/images/kural.png',
     blurb: 'AI-powered AAC device for ALS patients that speaks in their own cloned voice.',
     detail: 'AWS Hacks 2026, 1st Place (Cloud for Good Track). Generates contextually personalized sentences via Amazon Bedrock (Claude Haiku 4.5) and speaks them in the patient\'s preserved voice. Fine-tuned Coqui XTTS v2 on SageMaker (ml.g4dn.xlarge) on 30 personal recordings, achieving 20-25 second end-to-end latency. Shipped a Next.js PWA with iOS Eye Tracking auto-click selection, Amazon Cognito auth, offline fallback, and a real-time caregiver context panel.',
@@ -163,7 +163,7 @@ const ALL_PROJECTS = [
     links: [{ label: 'Devpost', url: 'https://devpost.com/software/kural-gxylzb' }],
   },
   {
-    n: '04', title: 'Nudge', year: 'Jan 2026', status: '1st Place',
+    n: '04', title: 'Nudge', year: 'Jan 2026', status: '1st Place', gold: true,
     image: '/images/nudge.png', portrait: true,
     blurb: 'iOS app that surfaces task breakdowns in your Dynamic Island.',
     detail: 'WINFO 2026, 1st Place (Best Implementation Track). Native iOS productivity app using MVVM to convert large tasks into ordered subtasks surfaced through Dynamic Island and WidgetKit. Backed by a Node.js/Express API proxying OpenAI requests, with JSON schema validation and fallback parsing for malformed GPT output.',
@@ -171,7 +171,7 @@ const ALL_PROJECTS = [
     links: [{ label: 'Demo', url: 'https://tinyurl.com/nudge-winfo' }],
   },
   {
-    n: '05', title: 'Taskflow', year: 'Oct 2025', status: '1st Place',
+    n: '05', title: 'Taskflow', year: 'Oct 2025', status: '1st Place', gold: true,
     image: '/images/taskflow.png', portrait: true,
     blurb: 'Chrome extension that converts assignment screenshots into Jira tasks instantly.',
     detail: 'DubHacks 2025, 1st Place (Atlassian Track). Uses OpenAI OCR to parse assignment screenshots into structured Kanban tasks across Canvas, Gradescope, and course websites. Integrated the Atlassian Rovo Agent API to automate Jira issue creation and board synchronization, cutting task entry to a single screenshot.',
@@ -254,7 +254,7 @@ function ProjectGrid({ openModal }) {
                 <span className="proj-card__year">{p.year}</span>
               </div>
               {p.image && (
-                <div className={`proj-card__img-wrap${p.portrait ? ' proj-card__img-wrap--portrait' : ''}`}>
+                <div className={`proj-card__img-wrap${p.portrait ? ' proj-card__img-wrap--portrait' : ''}${p.gold ? ' proj-card__img-wrap--gold' : ''}`}>
                   <img className="proj-card__img" src={p.image} alt={p.title} />
                 </div>
               )}

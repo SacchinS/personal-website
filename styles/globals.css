@@ -537,6 +537,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   object-position: top center;
 }
 
+/* Gold frame for award-winning projects */
+.proj-card__img-wrap--gold {
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.15);
+}
+.proj-card:hover .proj-card__img-wrap--gold {
+  border-color: rgba(212, 175, 55, 0.85);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
 .proj-card__title {
   font-family: var(--serif); font-weight: 300;
   font-size: clamp(24px, 2.2vw, 34px); letter-spacing: -0.01em; color: var(--ink);
